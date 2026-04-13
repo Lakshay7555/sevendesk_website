@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sevendesk IT Services | Edmonton Small Business IT Support</title>
+  <meta name="description" content="Trusted and certified IT professionals based in Edmonton, Alberta. Managed IT services, tech support, Microsoft 365, SMS marketing, and more for Canadian small businesses." />
+  <meta name="keywords" content="IT support Edmonton, managed IT services Alberta, small business IT Canada, Microsoft 365 support Edmonton, Sevendesk" />
+  <meta property="og:title" content="Sevendesk IT Services | Edmonton Small Business IT Support" />
+  <meta property="og:description" content="Local, certified IT support for Edmonton small businesses. We Find the Fix." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:        #0A2540;
+      --navy-mid:    #0d2e4d;
+      --navy-light:  #163d64;
+      --green:       #46D993;
+      --green-dark:  #30c47a;
+      --green-glow:  rgba(70,217,147,0.15);
+      --white:       #ffffff;
+      --off-white:   #f7f9fc;
+      --gray-light:  #eef1f6;
+      --text:        #1a2e44;
+      --text-light:  #5c6f82;
+      --shadow-sm:   0 2px 12px rgba(10,37,64,0.07);
+      --shadow-md:   0 6px 30px rgba(10,37,64,0.11);
+      --shadow-lg:   0 16px 60px rgba(10,37,64,0.15);
+      --radius:      14px;
+      --transition:  0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ─── TOP BAR ──────────────────────────────── */
+    .top-bar {
+      background: var(--navy);
+      padding: 9px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .top-bar a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color var(--transition);
+    }
+    .top-bar a:hover { color: var(--green); }
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .social-icon {
+      width: 28px; height: 28px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--transition);
+      color: rgba(255,255,255,0.55);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .social-icon:hover { background: rgba(70,217,147,0.15); color: var(--green); }
+
+    /* ─── HEADER ───────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(10,37,64,0.08);
+      padding: 0 5%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 20px rgba(10,37,64,0.06);
+      transition: box-shadow var(--transition);
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .logo-bar {
+      height: 3px;
+      background: var(--navy);
+      border-radius: 2px;
+      display: block;
+    }
+    .logo-text {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 1.18rem;
+      color: var(--navy);
+      letter-spacing: -0.3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color var(--transition), background var(--transition);
+    }
+    nav a:hover { color: var(--navy); background: rgba(10,37,64,0.04); }
+
+    .nav-cta {
+      background: var(--green) !important;
+      color: var(--navy) !important;
+      font-weight: 700 !important;
+      padding: 9px 20px !important;
+      border-radius: 50px !important;
+      margin-left: 8px;
+      box-shadow: 0 3px 12px rgba(70,217,147,0.28);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition) !important;
+    }
+    .nav-cta:hover {
+      background: var(--green-dark) !important;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 18px rgba(70,217,147,0.38) !important;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .mobile-menu-btn span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--navy);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    /* ─── HERO ──────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 120px 5% 110px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 60% at 15% 50%, rgba(70,217,147,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 70% at 85% 30%, rgba(70,217,147,0.07) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(70,217,147,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(70,217,147,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+    }
+    .hero-orb-1 { width: 500px; height: 500px; background: rgba(70,217,147,0.09); top: -100px; left: -80px; animation: float1 9s ease-in-out infinite; }
+    .hero-orb-2 { width: 320px; height: 320px; background: rgba(22,61,100,0.5); bottom: -80px; right: 8%; animation: float2 11s ease-in-out infinite; }
+    .hero-orb-3 { width: 200px; height: 200px; background: rgba(70,217,147,0.06); top: 40%; right: 20%; animation: float1 13s 2s ease-in-out infinite; }
+
+    @keyframes float1 { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-22px) scale(1.03)} }
+    @keyframes float2 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(18px)} }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(70,217,147,0.12);
+      border: 1px solid rgba(70,217,147,0.28);
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 26px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .badge-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.55;transform:scale(1.5)} }
+
+    .hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2.3rem, 4.5vw, 3.7rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+    }
+    .hero h1 .accent { color: var(--green); }
+
+    .hero-sub {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 44px;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: var(--navy);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.97rem;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all var(--transition);
+      box-shadow: 0 4px 22px rgba(70,217,147,0.30);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(70,217,147,0.42); }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.07);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.97rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255,255,255,0.16);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.13); border-color: rgba(255,255,255,0.28); transform: translateY(-2px); }
+
+    .hero-trust-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .trust-icon {
+      width: 28px; height: 28px;
+      background: rgba(70,217,147,0.12);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    /* Hero right – card stack */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all var(--transition);
+    }
+    .hero-card:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(70,217,147,0.25);
+      transform: translateX(6px);
+    }
+    .hero-card-icon {
+      width: 48px; height: 48px;
+      background: rgba(70,217,147,0.12);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(70,217,147,0.18);
+    }
+    .hero-card-text h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 2px;
+    }
+    .hero-card-text p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .hero-card-arrow {
+      margin-left: auto;
+      color: rgba(70,217,147,0.5);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* Floating stat chips */
+    .hero-stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 4px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .hero-stat-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--green);
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-stat-label {
+      font-size: 0.74rem;
+      color: rgba(255,255,255,0.45);
+      font-weight: 500;
+    }
+
+    /* ─── SECTION COMMONS ──────────────────────── */
+    section { padding: 90px 5%; }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green-dark);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.7px;
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 1.03rem;
+      color: var(--text-light);
+      line-height: 1.72;
+    }
+
+    .section-header-centered { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+    .section-header-split { margin-bottom: 56px; }
+
+    /* ─── SERVICES ─────────────────────────────── */
+    .services { background: var(--off-white); }
+    .services-inner { max-width: 1100px; margin: 0 auto; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid rgba(10,37,64,0.08);
+      border-radius: var(--radius);
+      padding: 34px 28px;
+      transition: all var(--transition);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), var(--green-dark));
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: left;
+    }
+    .service-card:hover {
+      border-color: rgba(70,217,147,0.28);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+    .service-icon {
+      width: 54px; height: 54px;
+      background: linear-gradient(135deg, rgba(70,217,147,0.14), rgba(70,217,147,0.05));
+      border-radius: 13px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem;
+      margin-bottom: 20px;
+      border: 1px solid rgba(70,217,147,0.16);
+    }
+    .service-card h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.68;
+      flex: 1;
+      margin-bottom: 22px;
+    }
+    .service-link {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: auto;
+    }
+    .service-link::after { content: '→'; transition: transform var(--transition); }
+    .service-card:hover .service-link::after { transform: translateX(4px); }
+
+    /* Featured service card */
+    .service-card.featured-service {
+      background: var(--navy);
+      border-color: rgba(70,217,147,0.2);
+    }
+    .service-card.featured-service::before { background: var(--green); }
+    .service-card.featured-service h3 { color: var(--white); }
+    .service-card.featured-service p { color: rgba(255,255,255,0.58); }
+    .service-card.featured-service .service-num { color: var(--green); }
+    .service-card.featured-service .service-link { color: var(--green); }
+    .service-card.featured-service .service-icon {
+      background: rgba(70,217,147,0.15);
+      border-color: rgba(70,217,147,0.25);
+    }
+
+    /* ─── WHY TRUST US ─────────────────────────── */
+    .trust { background: var(--white); }
+    .trust-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .trust-left { }
+    .trust-left .section-sub { margin-bottom: 36px; }
+
+    .trust-points {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .trust-point {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 22px;
+      background: var(--off-white);
+      border-radius: var(--radius);
+      border: 1px solid rgba(10,37,64,0.06);
+      transition: all var(--transition);
+    }
+    .trust-point:hover {
+      border-color: rgba(70,217,147,0.3);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+    }
+    .trust-point-icon {
+      width: 46px; height: 46px;
+      background: linear-gradient(135deg, rgba(70,217,147,0.15), rgba(70,217,147,0.05));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      border: 1px solid rgba(70,217,147,0.15);
+    }
+    .trust-point h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .trust-point p {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      line-height: 1.62;
+    }
+
+    .trust-right {
+      position: relative;
+    }
+
+    .trust-visual {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .trust-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 20% 30%, rgba(70,217,147,0.1) 0%, transparent 60%);
+    }
+    .trust-visual-content { position: relative; z-index: 1; }
+
+    .cert-badge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .cert-badge {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .cert-badge-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .cert-badge-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+    }
+
+    .trust-quote {
+      background: rgba(70,217,147,0.08);
+      border: 1px solid rgba(70,217,147,0.18);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+    .trust-quote p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+    .trust-quote-author {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    /* ─── SCAM SECTION ─────────────────────────── */
+    .anti-scam {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+    .anti-scam::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 50% 80% at 0% 50%, rgba(70,217,147,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 100% 50%, rgba(70,217,147,0.05) 0%, transparent 60%);
+    }
+    .anti-scam-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .anti-scam h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+    .anti-scam h2 em { color: var(--green); font-style: normal; }
+    .anti-scam p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.75;
+      max-width: 620px;
+      margin: 0 auto 44px;
+    }
+    .scam-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .scam-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: left;
+    }
+    .scam-card-icon { font-size: 1.7rem; margin-bottom: 14px; }
+    .scam-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .scam-card p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.65;
+      margin-bottom: 0;
+    }
+
+    /* ─── PROCESS ──────────────────────────────── */
+    .process { background: var(--off-white); }
+    .process-inner { max-width: 1100px; margin: 0 auto; }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+    }
+    .process-steps::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: calc(12.5% + 8px);
+      right: calc(12.5% + 8px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), rgba(70,217,147,0.15));
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .process-step-num {
+      width: 60px; height: 60px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Sora', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--green);
+      margin: 0 auto 22px;
+      border: 3px solid rgba(70,217,147,0.18);
+      box-shadow: 0 0 0 6px rgba(70,217,147,0.05);
+    }
+    .process-step h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .process-step p {
+      font-size: 0.83rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    /* ─── CTA STRIP ────────────────────────────── */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      padding: 70px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 100% at 50% 50%, rgba(70,217,147,0.07) 0%, transparent 65%);
+    }
+    .cta-strip-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-strip h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+      letter-spacing: -0.7px;
+      line-height: 1.2;
+    }
+    .cta-strip h2 em { color: var(--green); font-style: normal; }
+    .cta-strip p { font-size: 1rem; color: rgba(255,255,255,0.58); margin-bottom: 38px; line-height: 1.7; }
+    .cta-strip-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .cta-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 18px;
+      justify-content: center;
+    }
+    .cta-phone a { color: rgba(255,255,255,0.65); text-decoration: none; font-weight: 600; }
+    .cta-phone a:hover { color: var(--green); }
+
+    /* ─── FOOTER ───────────────────────────────── */
+    footer {
+      background: #071d30;
+      padding: 70px 5% 44px;
+    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 52px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 36px;
+    }
+
+    .footer-brand { }
+    .footer-logo-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer-logo-bar { height: 3px; background: var(--white); border-radius: 2px; display: block; }
+    .footer-logo-text { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem; color: white; }
+
+    .footer-tagline {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.72;
+      margin-bottom: 22px;
+    }
+    .footer-contact-list { display: flex; flex-direction: column; gap: 8px; }
+    .footer-contact-list a {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 7px;
+      transition: color var(--transition);
+    }
+    .footer-contact-list a:hover { color: var(--green); }
+
+    .footer-col h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul li a {
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.42);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--white); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.28); }
+    .footer-socials { display: flex; gap: 10px; }
+    .footer-social-icon {
+      width: 32px; height: 32px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      font-size: 0.7rem; font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      transition: all var(--transition);
+    }
+    .footer-social-icon:hover { background: rgba(70,217,147,0.12); color: var(--green); border-color: rgba(70,217,147,0.2); }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: 0.79rem; color: rgba(255,255,255,0.28); text-decoration: none; transition: color var(--transition); }
+    .footer-legal a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ─── ANIMATIONS ────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.d1 { transition-delay: 0.08s; }
+    .fade-up.d2 { transition-delay: 0.16s; }
+    .fade-up.d3 { transition-delay: 0.24s; }
+    .fade-up.d4 { transition-delay: 0.32s; }
+    .fade-up.d5 { transition-delay: 0.40s; }
+    .fade-up.d6 { transition-delay: 0.48s; }
+
+    /* ─── MOBILE ────────────────────────────────── */
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 50px; }
+      .hero-right { display: none; }
+      .trust-inner { grid-template-columns: 1fr; gap: 44px; }
+      .scam-cards { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .process-steps::after { display: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+      nav { display: none; }
+      .mobile-menu-btn { display: flex; }
+    }
+    @media (max-width: 660px) {
+      section { padding: 70px 4%; }
+      .hero { padding: 90px 4% 80px; }
+      .top-bar { padding: 8px 4%; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .hero-buttons { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+    }
+    @media (min-width: 661px) and (max-width: 960px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .scam-cards { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ TOP BAR ════════════ -->
+<div class="top-bar">
+  <div class="top-bar-left">
+    <a href="tel:7808515949">📞 780-851-5949</a>
+    <a href="mailto:contactus@sevendesk.ca">✉ contactus@sevendesk.ca</a>
+    <a href="https://wa.me/17808515949">💬 WhatsApp</a>
+  </div>
+  <div class="top-bar-right">
+    <a href="https://www.youtube.com/@sevendesk" class="social-icon" aria-label="YouTube">YT</a>
+    <a href="https://www.facebook.com/sevendeskit" class="social-icon" aria-label="Facebook">FB</a>
+    <a href="http://linkedin.com/company/sevendesk" class="social-icon" aria-label="LinkedIn">in</a>
+  </div>
+</div>
+
+<!-- ═══════════ HEADER ════════════ -->
+<header id="site-header">
+  <a href="https://www.sevendesk.ca" class="logo-wrap" aria-label="Sevendesk Home">
+    <div class="logo-icon">
+      <span class="logo-bar" style="width:22px;"></span>
+      <span class="logo-bar" style="width:15px;"></span>
+      <span class="logo-bar" style="width:19px;"></span>
+    </div>
+    <span class="logo-text">sevendesk</span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="https://www.sevendesk.ca">Home</a>
+    <a href="https://www.sevendesk.ca/about">About Us</a>
+    <a href="https://www.sevendesk.ca/services">Services</a>
+    <a href="https://www.sevendesk.ca/pricing">Pricing</a>
+    <a href="https://www.sevendesk.ca/faqs">FAQs</a>
+    <a href="https://www.sevendesk.ca/blogs">Blog</a>
+    <a href="https://www.sevendesk.ca/contact" class="nav-cta">Get in Touch</a>
+  </nav>
+  <button class="mobile-menu-btn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ═══════════ HERO ════════════ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="badge-dot"></div>
+        Edmonton, Alberta · Proudly Canadian 🍁
+      </div>
+      <h1 id="hero-title">
+        Trusted IT Support<br>That <span class="accent">We Find<br>The Fix</span>
+      </h1>
+      <p class="hero-sub">
+        Local, certified IT professionals based in Edmonton. Managed IT, tech support, Microsoft 365, SMS marketing, and more — for Canadian small businesses who need tech that just works.
+      </p>
+      <div class="hero-buttons">
+        <a href="https://www.sevendesk.ca/contact" class="btn-primary">
+          🚀 Get Started Today
+        </a>
+        <a href="https://www.sevendesk.ca/services" class="btn-secondary">
+          Explore Services
+        </a>
+      </div>
+      <div class="hero-trust-row">
+        <div class="trust-item">
+          <div class="trust-icon">🛡️</div>
+          <span>100% Satisfaction Guarantee</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🇨🇦</div>
+          <span>Local Canadian Team</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">⚡</div>
+          <span>Fast Response Times</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">Satisfaction Guarantee</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">🇨🇦</div>
+          <div class="hero-stat-label">Canadian-Based Team</div>
+        </div>
+      </div>
+      <a href="https://www.sevendesk.ca/managed-it" class="hero-card">
+        <div class="hero-card-icon">🖥️</div>
+        <div class="hero-card-text">
+          <h4>Managed IT Services</h4>
+          <p>Your on-demand IT team, always on</p>
+        </div>
+        <div class="hero-card-arrow">→</div>
+      </a>
+      <a href="https://www.sevendesk.ca/services" class="hero-card">
+        <div class="hero-card-icon">📧</div>
+        <div class="hero-card-text">
+          <h4>Microsoft 365 & Google Workspace</h4>
+          <p>Setup, migration & ongoing support</p>
+        </div>
+        <div class="hero-card-arrow">→</div>
+      </a>
+      <a href="https://www.sevendesk.ca/sms" class="hero-card">
+        <div class="hero-card-icon">💬</div>
+        <div class="hero-card-text">
+          <h4>SMS Marketing</h4>
+          <p>Powered by SimpleTexting · CASL-compliant</p>
+        </div>
+        <div class="hero-card-arrow">→</div>
+      </a>
+      <a href="https://www.sevendesk.ca/services" class="hero-card">
+        <div class="hero-card-icon">🔐</div>
+        <div class="hero-card-text">
+          <h4>Webroot® Cybersecurity Training</h4>
+          <p>Protect your team from phishing & scams</p>
+        </div>
+        <div class="hero-card-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ════════════ -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="services-inner">
+    <div class="section-header-centered fade-up">
+      <p class="section-label">Our Services</p>
+      <h2 class="section-title" id="services-title">Everything your business needs to run smoothly</h2>
+      <p class="section-sub">From day-to-day tech support to full managed IT and digital marketing — Sevendesk has you covered.</p>
+    </div>
+    <div class="services-grid">
+      <a href="https://www.sevendesk.ca/services" class="service-card fade-up d1">
+        <div class="service-num">Service 01</div>
+        <div class="service-icon">🧑‍💻</div>
+        <h3>Personal Tech Support, Made Easy</h3>
+        <p>Stuck with tech? Get answers, guidance, and training whenever you need it — all for a simple monthly fee. Perfect for individuals and small businesses.</p>
+        <span class="service-link">Learn More</span>
+      </a>
+      <a href="https://www.sevendesk.ca/managed-it" class="service-card fade-up d2">
+        <div class="service-num">Service 02</div>
+        <div class="service-icon">🖥️</div>
+        <h3>Business Managed IT & Helpdesk</h3>
+        <p>Think of us as your on-demand IT team. We keep your tech running smoothly with fast, reliable support — so you can focus on growing your business.</p>
+        <span class="service-link">Learn More</span>
+      </a>
+      <a href="https://www.sevendesk.ca/sms" class="service-card featured-service fade-up d3">
+        <div class="service-num">Service 03</div>
+        <div class="service-icon">📱</div>
+        <h3>SMS Marketing Powered by SimpleTexting</h3>
+        <p>Drive more bookings, orders, and repeat customers with fully managed, CASL-compliant SMS campaigns. 98% open rate — the highest of any channel.</p>
+        <span class="service-link">Explore SMS Marketing</span>
+      </a>
+      <a href="https://www.sevendesk.ca/services" class="service-card fade-up d1">
+        <div class="service-num">Service 04</div>
+        <div class="service-icon">☁️</div>
+        <h3>Microsoft 365 & Google Workspace</h3>
+        <p>We set up and manage your Microsoft 365 or Google Workspace subscriptions so your team can collaborate seamlessly across all devices and locations.</p>
+        <span class="service-link">Learn More</span>
+      </a>
+      <a href="https://www.sevendesk.ca/services/microsoft-sharepoint" class="service-card fade-up d2">
+        <div class="service-num">Service 05</div>
+        <div class="service-icon">📂</div>
+        <h3>Microsoft SharePoint Setup & Support</h3>
+        <p>We build your SharePoint site from the ground up — tailored for internal docs, SOPs, user guides, and end-user training materials.</p>
+        <span class="service-link">Learn More</span>
+      </a>
+      <a href="https://www.sevendesk.ca/services" class="service-card fade-up d3">
+        <div class="service-num">Service 06</div>
+        <div class="service-icon">🛡️</div>
+        <h3>Webroot® Security Awareness Training</h3>
+        <p>Educate your team about phishing, malware, and social engineering. Our Webroot partnership delivers engaging, practical cybersecurity training that works.</p>
+        <span class="service-link">Learn More</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WHY TRUST US ════════════ -->
+<section class="trust" id="why-us" aria-labelledby="trust-title">
+  <div class="trust-inner">
+    <div class="trust-left fade-up">
+      <p class="section-label">Why Trust Us</p>
+      <h2 class="section-title" id="trust-title">We're not just another IT company</h2>
+      <p class="section-sub">In a world full of remote support scams and outsourced call centres, Sevendesk is different. We're local, accountable, and genuinely invested in your success.</p>
+      <br />
+      <div class="trust-points">
+        <div class="trust-point">
+          <div class="trust-point-icon">📍</div>
+          <div>
+            <h4>Local Support Teams</h4>
+            <p>Our IT teams are always based locally in Canada. We do not outsource talent — ever. When you call Sevendesk, you speak to someone who understands your community.</p>
+          </div>
+        </div>
+        <div class="trust-point">
+          <div class="trust-point-icon">✅</div>
+          <div>
+            <h4>100% Satisfaction Guarantee</h4>
+            <p>You can rely on us for safe, reliable, and cost-effective IT support. Your satisfaction is our top priority — and we guarantee it, no exceptions.</p>
+          </div>
+        </div>
+        <div class="trust-point">
+          <div class="trust-point-icon">🧠</div>
+          <div>
+            <h4>We Know Tech</h4>
+            <p>With decades of combined experience in IT support and managed services, we have the skills, certifications, and tools to support your business at any stage of growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-right fade-up d3">
+      <div class="trust-visual">
+        <div class="trust-visual-content">
+          <div class="cert-badge-grid">
+            <div class="cert-badge">
+              <div class="cert-badge-icon">🇨🇦</div>
+              <div class="cert-badge-label">Alberta Registered Business</div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-badge-icon">🔒</div>
+              <div class="cert-badge-label">Cybersecurity Certified</div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-badge-icon">☁️</div>
+              <div class="cert-badge-label">Microsoft 365 Partner</div>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-badge-icon">📱</div>
+              <div class="cert-badge-label">SimpleTexting Official Partner</div>
+            </div>
+          </div>
+          <div class="trust-quote">
+            <p>"Sevendesk is a fully incorporated and registered business in Alberta, Canada. We stand against scams and cybercrime — and at every opportunity, we train our clients to stay vigilant online."</p>
+            <div class="trust-quote-author">— Sevendesk IT Services Inc.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ANTI-SCAM ════════════ -->
+<section class="anti-scam" aria-labelledby="scam-title">
+  <div class="anti-scam-inner">
+    <div class="fade-up">
+      <p class="section-label" style="color:var(--green);">Our Promise</p>
+      <h2 id="scam-title">We <em>Stand Against</em> Cyber Scams</h2>
+      <p>In a domain where every new remote IT business is viewed as a potential scam, we couldn't be further from that. We're here to genuinely help our community — and keep you safe while doing it.</p>
+    </div>
+    <div class="scam-cards">
+      <div class="scam-card fade-up d1">
+        <div class="scam-card-icon">🚫</div>
+        <h4>Zero Tolerance for Scams</h4>
+        <p>We will never cold-call you about a virus, ask for remote access unsolicited, or pressure you into purchases. If someone claiming to be us does this — it's fraud. Call us directly.</p>
+      </div>
+      <div class="scam-card fade-up d2">
+        <div class="scam-card-icon">🎓</div>
+        <h4>We Train You to Stay Safe</h4>
+        <p>At every opportunity, we educate our clients on phishing, social engineering, and online fraud. Awareness is your best defence — and we make it part of every interaction.</p>
+      </div>
+      <div class="scam-card fade-up d3">
+        <div class="scam-card-icon">🤝</div>
+        <h4>Transparent & Accountable</h4>
+        <p>We're a fully incorporated Alberta business. Our pricing is clear, our contracts are fair, and our team is always identifiable. No offshore routing, no hidden fees, no surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESS ════════════ -->
+<section class="process" id="how-it-works" aria-labelledby="process-title">
+  <div class="process-inner">
+    <div class="section-header-centered fade-up">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title" id="process-title">Up and running in days, not weeks</h2>
+      <p class="section-sub">Getting started with Sevendesk is simple. No complicated onboarding, no technical jargon — just results.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up d1">
+        <div class="process-step-num">01</div>
+        <h4>Fill Out Our Questionnaire</h4>
+        <p>Tell us about your business, your tech, and your biggest challenges. Takes less than 3 minutes.</p>
+      </div>
+      <div class="process-step fade-up d2">
+        <div class="process-step-num">02</div>
+        <h4>We Review & Reach Out</h4>
+        <p>Our team reviews your needs and contacts you within one business day to discuss the right fit.</p>
+      </div>
+      <div class="process-step fade-up d3">
+        <div class="process-step-num">03</div>
+        <h4>Custom Plan Built for You</h4>
+        <p>We put together a tailored service plan with transparent pricing — no hidden costs, no surprises.</p>
+      </div>
+      <div class="process-step fade-up d4">
+        <div class="process-step-num">04</div>
+        <h4>We Handle the Rest</h4>
+        <p>Sit back while we manage your IT, run your campaigns, or train your team. You focus on your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA STRIP ════════════ -->
+<section class="cta-strip" id="contact">
+  <div class="cta-strip-inner">
+    <div class="fade-up">
+      <p class="section-label" style="color:var(--green);">Ready to Get Started?</p>
+      <h2>Let's solve your <em>biggest IT headache</em> — today.</h2>
+      <p>Whether you need immediate tech support, a managed IT partner, or a powerful SMS marketing engine — Sevendesk is ready. Book a free consultation and let's talk.</p>
+      <div class="cta-strip-btns">
+        <a href="https://www.sevendesk.ca/contact" class="btn-primary" style="font-size:1rem;padding:16px 32px;">
+          🚀 Get a Free Consultation
+        </a>
+        <a href="https://www.sevendesk.ca/pricing" class="btn-secondary" style="font-size:1rem;padding:15px 30px;">
+          View Pricing
+        </a>
+      </div>
+      <div class="cta-phone">
+        <span>Or call / text us directly:</span>
+        <a href="tel:7808515949">780-851-5949</a>
+        <span>·</span>
+        <a href="mailto:contactus@sevendesk.ca">contactus@sevendesk.ca</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-row">
+          <div class="logo-icon">
+            <span class="footer-logo-bar" style="width:22px;"></span>
+            <span class="footer-logo-bar" style="width:15px;margin-top:4px;"></span>
+            <span class="footer-logo-bar" style="width:19px;margin-top:4px;"></span>
+          </div>
+          <span class="footer-logo-text">sevendesk</span>
+        </div>
+        <p class="footer-tagline">Sevendesk IT Services Inc. — local, certified IT professionals and digital marketing experts serving Edmonton and all of Alberta. We find the fix.</p>
+        <div class="footer-contact-list">
+          <a href="tel:7808515949">📞 780-851-5949</a>
+          <a href="mailto:contactus@sevendesk.ca">✉ contactus@sevendesk.ca</a>
+          <a href="https://wa.me/17808515949">💬 WhatsApp us</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://www.sevendesk.ca/services">Personal Tech Support</a></li>
+          <li><a href="https://www.sevendesk.ca/managed-it">Managed IT Services</a></li>
+          <li><a href="https://www.sevendesk.ca/sms">SMS Marketing</a></li>
+          <li><a href="https://www.sevendesk.ca/services">Microsoft 365</a></li>
+          <li><a href="https://www.sevendesk.ca/services/microsoft-sharepoint">SharePoint</a></li>
+          <li><a href="https://www.sevendesk.ca/services/custom-pdf-forms">Custom PDF Forms</a></li>
+          <li><a href="https://www.sevendesk.ca/vpn">VPN Implementation</a></li>
+          <li><a href="https://www.sevendesk.ca/internet">TekSavvy Internet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.sevendesk.ca/about">About Us</a></li>
+          <li><a href="https://www.sevendesk.ca/pricing">Pricing</a></li>
+          <li><a href="https://www.sevendesk.ca/faqs">FAQs</a></li>
+          <li><a href="https://www.sevendesk.ca/blogs">Blog</a></li>
+          <li><a href="https://www.sevendesk.ca/contact">Contact Us</a></li>
+          <li><a href="https://www.sevendesk.ca/tech-support-bot">Tech Support Bot</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/@sevendesk">YouTube</a></li>
+          <li><a href="https://www.facebook.com/sevendeskit">Facebook</a></li>
+          <li><a href="http://linkedin.com/company/sevendesk">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 by SevenDesk IT Services Inc. All rights reserved. Proudly Canadian 🍁</p>
+      <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+        <div class="footer-socials">
+          <a href="https://www.youtube.com/@sevendesk" class="footer-social-icon" aria-label="YouTube">YT</a>
+          <a href="https://www.facebook.com/sevendeskit" class="footer-social-icon" aria-label="Facebook">FB</a>
+          <a href="http://linkedin.com/company/sevendesk" class="footer-social-icon" aria-label="LinkedIn">in</a>
+        </div>
+        <div class="footer-legal">
+          <a href="https://www.sevendesk.ca/privacy-policy">Privacy Policy</a>
+          <a href="https://www.sevendesk.ca/terms-and-conditions">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Sticky header shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 20
+      ? '0 4px 30px rgba(10,37,64,0.11)'
+      : '0 2px 20px rgba(10,37,64,0.06)';
+  });
+</script>
+</body>
+</html>
